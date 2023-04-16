@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
     return (
         <>
-            <div className={styles.header}>
+            {/* <div className={styles.header}>
                 <h1>Ray is on the Web</h1>
                 <p>i leik board games</p>
             </div>
@@ -18,7 +18,7 @@ export default function Home() {
                 <a href="#">Team Randomizer</a>
                 <a href="#">Top 10 Board Games</a>
                 <a href="#">Board Game Collection</a>
-            </div>
+            </div> */}
             <div className={styles.row}>
                 <div className={styles.side}>
                     idk what's gonna go here, maybe a picture?
