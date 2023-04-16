@@ -11,7 +11,7 @@ export default function NavigationBar() {
             <div className={styles.navbar}>
                 <Link href="/">Home</Link>
                 <Link href="/posts/first-post">Applications</Link>
-                <a href="#">First Person Selector</a>
+                <a href="/firstperson">First Person Selector</a>
                 <Link href="/teamrandomizer">Team Randomizer</Link>
                 <a href="#">Top 10 Board Games</a>
                 <a href="#">Board Game Collection</a>
