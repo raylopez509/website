@@ -1,0 +1,38 @@
+#textarea {
+    height: 10em;
+    width: 50em;
+    resize: none;
+}
+
+.teams {
+    padding: 2rem;
+    white-space: pre-line;
+}
+
+#teamUI {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#teamQuantity {
+    padding: 2rem;
+}
+
+#btn {
+    align-self: center;
+}
+
+.listing {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    text-align: center;
+}
