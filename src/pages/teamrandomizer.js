@@ -1,14 +1,14 @@
 //import "../styles/TeamRandomizer.css";
 import { useState } from "react";
 
+const Title = () => {
+    return <h1 className="title">Team Randomizer</h1>;
+};
+
 export default function TeamRandomizer() {
     const [names, setNames] = useState("");
     const [teamQuantity, setTeamQuantity] = useState(2);
     const [teamArray, setTeamArray] = useState([]);
-
-    const Title = () => {
-        return <h1 className="title">Team Randomizer</h1>;
-    };
 
     function TeamQuantity() {
         return (
