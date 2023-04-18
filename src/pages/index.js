@@ -31,6 +31,7 @@ export default function Home() {
                 />
                 <div className={styles.main}>this is my website</div>
             </div>
+            {/* Move footer to _app.js, just like navigation */}
             <div className={styles.footer}>
                 <h2>All rights reserved by Ray®</h2>
             </div>
