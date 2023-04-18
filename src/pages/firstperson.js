@@ -1,6 +1,3 @@
-import "../scripts/randomizer";
-import getStartingPlayer from "../scripts/randomizer";
-
 export default function FirstPerson() {
     return (
         <>
@@ -17,7 +14,14 @@ export default function FirstPerson() {
                 Get Start Player!
             </button>
             <p id="start"></p>
-            <script src="../scripts/randomizer.js"></script>
         </>
     );
+}
+
+function getStartingPlayer() {
+    let str = document.getElementById("textarea").value;
+    let players = str.split("\n");
+    let randNum = Math.floor(Math.random() * players.length);
+    let startString = "The starting player is " + players[randNum];
+    document.getElementById("start").innerHTML = startString;
 }

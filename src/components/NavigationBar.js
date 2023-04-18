@@ -7,8 +7,12 @@ const links = [
     text: 'Home',
   },
   {
-    href: '/posts/first-post',
-    text: 'Applications',
+    href: '/projects',
+    text: 'Projects',
+  },
+  {
+    href: '/tictactoe',
+    text: 'Tic Tac Toe',
   },
   {
     href: '/firstperson',
@@ -19,13 +23,13 @@ const links = [
     text: 'Team Randomizer',
   },
   {
-    href: '#',
+    href: 'top10boardgames',
     text: 'Top 10 Board Games',
   },
-  {
-    href: '#',
-    text: 'Board Game Collection',
-  },
+  // {
+  //   href: '#',
+  //   text: 'Board Game Collection',
+  // },
 ]
 
 export default function NavigationBar() {
@@ -40,11 +44,12 @@ export default function NavigationBar() {
                   <Link href={link.href}>{link.text}</Link>
               ))}
                 {/* <Link href="/">Home</Link>
-                <Link href="/posts/first-post">Applications</Link>
-                <a href="/firstperson">First Person Selector</a>
+                <Link href="/projects">Projects</Link>
+                <Link href="/tictactoe">Tic Tac Toe</Link>
+                <Link href="/firstperson">First Person Selector</Link>
                 <Link href="/teamrandomizer">Team Randomizer</Link>
-                <a href="#">Top 10 Board Games</a>
-                <a href="#">Board Game Collection</a> */}
+                <Link href="/top10boardgames">Top 10 Board Games</Link> */}
+                {/* <a href="#">Board Game Collection</a> */}
             </div>
         </>
     );
