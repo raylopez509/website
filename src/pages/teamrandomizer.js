@@ -128,7 +128,9 @@ export default function TeamRandomizer() {
                 onChange={(e) => setNames(e.target.value)}
             ></textarea>
             <TeamUI />
-            <div className="listing">{TeamListComponent()}</div>
+            <div className="listing">
+              <TeamListComponent />
+            </div>
         </>
     );
 }
