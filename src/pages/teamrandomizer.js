@@ -5,6 +5,45 @@ const Title = () => {
     return <h1 className="title">Team Randomizer</h1>;
 };
 
+function getRandomTeamArray(teamNumber) {
+    let str = document.getElementById("textarea").value.trim();
+    let players = str.split("\n");
+    let teamarr = [[]];
+    let randTeamArray = [];
+    for (let i = 0; i < teamNumber; i++) {
+        teamarr[i] = [];
+    }
+    let randNum = Math.floor(Math.random() * players.length);
+    let playerLength = players.length;
+    let team = 0;
+    for (let i = 0; i < playerLength; i++) {
+        let removedPlayer = players.splice(randNum, 1);
+        teamarr[team].push(removedPlayer);
+        team++;
+        if (team >= teamNumber) {
+            team = 0;
+        }
+        randNum = Math.floor(Math.random() * players.length);
+    }
+    let teamsText = "";
+    let teamNum = 1;
+    for (let i = 0; i < teamNumber; i++) {
+        teamsText = teamsText + "Team " + teamNum + ":\n";
+        let playerNum = 1;
+        for (let j = 0; j < teamarr[i].length; j++) {
+            teamsText = teamsText + playerNum + ". " + teamarr[i][j];
+            playerNum++;
+            if (j !== teamarr[i].length - 1) {
+                teamsText = teamsText + "\n";
+            }
+        }
+        randTeamArray.push(teamsText);
+        teamNum++;
+        teamsText = "";
+    }
+    return randTeamArray;
+}
+
 export default function TeamRandomizer() {
     const [names, setNames] = useState("");
     const [teamQuantity, setTeamQuantity] = useState(2);
@@ -76,45 +115,6 @@ export default function TeamRandomizer() {
             );
         });
         return teamLists;
-    }
-
-    function getRandomTeamArray(teamNumber) {
-        let str = document.getElementById("textarea").value.trim();
-        let players = str.split("\n");
-        let teamarr = [[]];
-        let randTeamArray = [];
-        for (let i = 0; i < teamNumber; i++) {
-            teamarr[i] = [];
-        }
-        let randNum = Math.floor(Math.random() * players.length);
-        let playerLength = players.length;
-        let team = 0;
-        for (let i = 0; i < playerLength; i++) {
-            let removedPlayer = players.splice(randNum, 1);
-            teamarr[team].push(removedPlayer);
-            team++;
-            if (team >= teamNumber) {
-                team = 0;
-            }
-            randNum = Math.floor(Math.random() * players.length);
-        }
-        let teamsText = "";
-        let teamNum = 1;
-        for (let i = 0; i < teamNumber; i++) {
-            teamsText = teamsText + "Team " + teamNum + ":\n";
-            let playerNum = 1;
-            for (let j = 0; j < teamarr[i].length; j++) {
-                teamsText = teamsText + playerNum + ". " + teamarr[i][j];
-                playerNum++;
-                if (j !== teamarr[i].length - 1) {
-                    teamsText = teamsText + "\n";
-                }
-            }
-            randTeamArray.push(teamsText);
-            teamNum++;
-            teamsText = "";
-        }
-        return randTeamArray;
     }
 
     return (
