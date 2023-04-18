@@ -1,6 +1,33 @@
 import styles from "../styles/NavigationBar.module.css";
 import Link from "next/link";
 
+const links = [
+  {
+    href: '/',
+    text: 'Home',
+  },
+  {
+    href: '/posts/first-post',
+    text: 'Applications',
+  },
+  {
+    href: '/firstperson',
+    text: 'First Person Selector',
+  },
+  {
+    href: '/teamrandomizer',
+    text: 'Team Randomizer',
+  },
+  {
+    href: '#',
+    text: 'Top 10 Board Games',
+  },
+  {
+    href: '#',
+    text: 'Board Game Collection',
+  },
+]
+
 export default function NavigationBar() {
     return (
         <>
@@ -9,12 +36,15 @@ export default function NavigationBar() {
                 <p>i leik board games</p>
             </div>
             <div className={styles.navbar}>
-                <Link href="/">Home</Link>
+              {links.map(link => (
+                  <Link href={link.href}>{link.text}</Link>
+              ))}
+                {/* <Link href="/">Home</Link>
                 <Link href="/posts/first-post">Applications</Link>
                 <a href="/firstperson">First Person Selector</a>
                 <Link href="/teamrandomizer">Team Randomizer</Link>
                 <a href="#">Top 10 Board Games</a>
-                <a href="#">Board Game Collection</a>
+                <a href="#">Board Game Collection</a> */}
             </div>
         </>
     );
