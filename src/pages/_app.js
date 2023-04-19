@@ -1,4 +1,4 @@
-import NavigationBar from "../components/NavigationBar.js";
+import NavigationBar from "../components/NavigationBar";
 import styles from "../styles/globals.css";
 import "../styles/TeamRandomizer.css";
 
