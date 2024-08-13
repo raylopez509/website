@@ -1,0 +1,15 @@
+@keyframes slideIn {
+  from {
+    transform: translateX(-800%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slideintext {
+  display: inline-block;
+  animation: slideIn 2s ease-out forwards;
+}
